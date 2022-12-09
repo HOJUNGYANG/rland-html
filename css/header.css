@@ -1,0 +1,13 @@
+.header {
+    height: 50px;
+    background-color: #4e4e4e;
+
+    display: flex;
+    align-items: center;
+}
+
+.d-none {
+    
+}
+/* 섹션을 가지고 있으면 모두 헤더가 들어갈 수 있다. 헤더가 하나일 이유는 없음 */
+/* 네비는 헤더영역을 가질 수 없다 */

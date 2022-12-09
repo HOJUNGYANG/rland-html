@@ -1,0 +1,137 @@
+.menu {
+    padding: 40px 0;
+    border-bottom: 1px solid #a2a2a2;
+}
+
+.menu:last-child {
+    border: none;
+}
+
+.menu form{
+    display: grid;
+    grid-template: "img title title" 24px
+                    "img price opt" 24px
+                    "img btn btn" 32px / 80px 60px 1fr;
+}
+
+.menu form>h1 {
+    grid-area: title;
+    margin-left: 10px;
+
+    font-size: 17px;
+}
+
+.menu-img-box {
+    grid-area: img;
+}
+
+.menu-img {
+    width: 80px;
+    height: 80px;
+    border-radius: 40px;
+    object-fit: cover;
+}
+
+.menu-price {
+    grid-area: price;
+    margin-left: 10px;
+}
+
+
+.menu-option-list {
+    grid-area: opt;
+    justify-self: flex-end;
+}
+
+.menu-button-list {
+    grid-area: btn;
+    justify-self: flex-end; /* 버튼 스스로가 오른쪽에 정렬되도록 */
+}
+
+.menu-option-input {
+    width: 12px;
+    height: 12px;
+    border: 1px solid rgb(252, 178, 178);
+
+}
+
+.input-option-input-on {
+    background-color: rgb(252, 178, 178);
+}
+
+.menu-option {
+    display: inline-flex;
+    align-items: center;
+}
+
+.menu-option .menu-option-input {
+    margin-right: 5px;
+}
+
+/* 16px이 글꼴 기본 크기임 */
+
+/* ------------------------------------------ */
+@media (min-width: 768px) {
+    .menu-list {
+        display: grid;
+        /* grid-template-columns: 3; */
+        grid-template-columns: repeat(3, 1fr); /* 1fr = 가변크기 */
+        grid-gap: 40px 20px; /* 수직 수평 */
+    }
+
+    .menu {
+        flex-shrink: 0;
+        /* flex-grow: 1; */
+        padding: 0 0 10px 0;
+        /* width: 200px; */ /* 아이템의 너비를 고정해버리면 브라우저 크기에 따라 간격이 늘어난다. */
+        border: 1px solid #707070;
+    }
+
+    .menu:last-child {
+        border: 1px solid #707070;
+    }
+
+    .menu form {
+        display: grid;
+        grid-template: "img img" 130px
+                        "title price" 30px
+                        "opt opt" 30px
+                        "btn btn" 40px / 1fr 70px;
+    }
+    
+    .menu-img {
+        width: 100%;
+        height: 100%;
+        border-radius: 0;
+        /* object-fit: cover; */
+    }
+
+    .btn {
+        margin-left: 5px;
+    }
+
+    .menu-button-list, .menu-option-list {
+        justify-self: center;
+
+        display: flex;
+        align-items: center;
+    }
+
+    .menu form>h1 {
+        align-self: center;
+        justify-self: flex-start;
+    }
+
+    .menu-price {
+        align-self: center;
+        justify-self: flex-end;
+        margin-right: 10%;
+    }
+
+    .menu-option {
+        display: inline-flex;
+        align-items: center;
+    }
+
+}
+/* flex는 아이템들 사이의 간격을 고정할 수는 없다. 또한, 한 줄에 보여질 아이템의 갯수를 정할 수 없다. */
