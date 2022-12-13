@@ -5,3 +5,4 @@ window.addEventListener("load", function() {
 
 console.log("hihi~ test!");
 console.log("hello~ test~");
+console.log("ohohoh");
